@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Mulish', 'Poppins',  sans-serif;
+  font-family: 'Montserrat', 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-left: 9rem;
+  margin-right: 9rem;
+  margin-top: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

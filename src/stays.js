@@ -1,3 +1,4 @@
+export const StaysData = 
 [
   {
     "city": "Helsinki",

@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
 import StaysList from './components/StaysList'
 
 function App() {
   return (
-    <div className="App">
+    <div>
+        <Header></Header>
         <StaysList></StaysList>
-        <h1>thelloa</h1>
     </div>
   );
 }

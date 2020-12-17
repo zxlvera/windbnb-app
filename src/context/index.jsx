@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import StaysData from '../context/stays.json'
+import { StaysData } from '../stays'
 
 // Create Context
 const StaysContext = React.createContext()
@@ -7,13 +7,11 @@ const StaysContext = React.createContext()
 // Create Provider
 const StaysProvider = (props) => {
     // Initialize Data
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(StaysData);
 
     // Intialize data = true
     const [isLoading, setIsLoading] = useState(true)
     
-    const getData = setData(StaysData) 
-    console.log(getData)
     return (
         <StaysContext.Provider
             value={{
