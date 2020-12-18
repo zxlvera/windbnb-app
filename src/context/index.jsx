@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StaysData } from '../stays'
+import { staysData } from '../stays'
 
 // Create Context
 const StaysContext = React.createContext()
@@ -7,7 +7,7 @@ const StaysContext = React.createContext()
 // Create Provider
 const StaysProvider = (props) => {
     // Initialize Data
-    const [data, setData] = useState(StaysData);
+    const [data, setData] = useState(staysData);
 
     // Intialize data = true
     const [isLoading, setIsLoading] = useState(true)

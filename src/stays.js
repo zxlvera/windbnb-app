@@ -1,4 +1,4 @@
-export const StaysData = 
+export const staysData = 
 [
   {
     "city": "Helsinki",
