@@ -6,36 +6,43 @@ const GridLayout = styled.div`
   height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 40rem;
+  grid-auto-rows: 38rem;
   grid-gap: 2rem;
   justify-items: center;
-  align-items: center;
 `;
 
 const Grid = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 2rem;
 `;
 
 const Description = styled.div`
-  margin-top: 1rem;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
-const DescriptionTxt = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
+const DescBlock = styled.div`
+  display: inline-flex;
+  align-items: baseline;
 `;
+
+const Rating = styled.span`
+  display: inline-flex;
+  align-items: center;
+`;
+
 const SuperHost = styled.div`
   width: 100px;
   height: 28px;
   border: 1px solid #4f4f4f;
   box-sizing: border-box;
   border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
 `;
 
 const SuperHostTxt = styled.span`
@@ -63,7 +70,7 @@ const StaysList = () => {
             <Grid>
               <Img key={index} src={item.photo} alt={item.title} />
               <Description>
-                <DescriptionTxt>
+                <DescBlock>
                   {item.superHost && (
                     <SuperHost>
                       <SuperHostTxt>SUPER HOST</SuperHostTxt>
@@ -72,17 +79,16 @@ const StaysList = () => {
                   {item.beds > 0 ? (
                     <h6>
                       {item.type} . {item.beds}{" "}
-                      {item.beds.length > 1 ? (
-                        <span>bed</span>
-                      ) : (
-                        <span>bed</span>
-                      )}
+                      {item.beds > 1 ? <span>beds</span> : <span>bed</span>}
                     </h6>
                   ) : (
                     <h6>{item.type}</h6>
                   )}
-                </DescriptionTxt>
-                <h6>{item.rating}</h6>
+                </DescBlock>
+                <Rating>
+                  <i class="material-icons">star</i>
+                  <h6 style={{ marginLeft: "0.5rem" }}>{item.rating}</h6>
+                </Rating>
               </Description>
               <h3>{item.title}</h3>
             </Grid>
