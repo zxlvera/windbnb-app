@@ -46,7 +46,7 @@ const SearchText = styled.input.attrs((props) => ({
   outline: 0;
   border: 0;
   border-right: 1px solid #f2f2f2;
-  margin-left: 1rem;
+  margin-left: 2rem;
 `;
 
 const SearchGuest = styled.input.attrs((props) => ({
@@ -58,7 +58,7 @@ const SearchGuest = styled.input.attrs((props) => ({
   outline: 0;
   border: 0;
   border-right: 1px solid #f2f2f2;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 
   ::-webkit-outer-spin-button {
     -webkit-appearance: none;

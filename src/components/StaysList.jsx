@@ -4,10 +4,11 @@ import { StaysContext } from "../context";
 
 const GridLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
-  grid-auto-rows: 38rem;
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: max-content;
+  grid-gap: 5rem;
   justify-items: center;
+  margin-bottom: 5rem;
 `;
 
 const Grid = styled.div`
@@ -54,10 +55,10 @@ const SuperHostTxt = styled.span`
 
 const Img = styled.img`
   border-radius: 24px;
-  width: 400px;
-  height: 269px;
+  width: 100%;
+  height: 30rem;
   object-fit: cover;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const StaysList = () => {
