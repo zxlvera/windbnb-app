@@ -21,6 +21,7 @@ const Description = styled.div`
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 `;
 
 const DescBlock = styled.div`
@@ -31,6 +32,7 @@ const DescBlock = styled.div`
 const Rating = styled.span`
   display: inline-flex;
   align-items: center;
+  color: #eb5757;
 `;
 
 const SuperHost = styled.div`
@@ -56,6 +58,7 @@ const Img = styled.img`
   width: 400px;
   height: 269px;
   object-fit: cover;
+  margin-bottom: 2rem;
 `;
 
 const StaysList = () => {
@@ -66,9 +69,9 @@ const StaysList = () => {
     <>
       <GridLayout>
         {data.map((item, index) => (
-          <>
+          <div key={index}>
             <Grid>
-              <Img key={index} src={item.photo} alt={item.title} />
+              <Img src={item.photo} alt={item.title} />
               <Description>
                 <DescBlock>
                   {item.superHost && (
@@ -86,13 +89,13 @@ const StaysList = () => {
                   )}
                 </DescBlock>
                 <Rating>
-                  <i class="material-icons">star</i>
+                  <i className="material-icons">star</i>
                   <h6 style={{ marginLeft: "0.5rem" }}>{item.rating}</h6>
                 </Rating>
               </Description>
-              <h3>{item.title}</h3>
+              <h2>{item.title}</h2>
             </Grid>
-          </>
+          </div>
         ))}
       </GridLayout>
     </>
