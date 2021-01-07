@@ -5,6 +5,7 @@ import { StaysContext } from "../context";
 
 const HeaderBlock = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 5rem;
 `;
@@ -15,23 +16,25 @@ const TitleBlock = styled.div`
   justify-content: space-between;
   margin-bottom: 3rem;
 `;
+
 const Logo = styled.img`
-  width: 8rem;
+  padding-right: 5rem;
   margin-bottom: 2rem;
+  flex: 0 1 10rem;
 `;
 
 const SearchBarBlock = styled.div`
-  width: 30rem;
   height: 5.5rem;
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  flex: 0 1 40rem;
 `;
 
 const SearchBar = styled.form`
   height: 5.5rem;
   display: grid;
-  grid-template-columns: 15rem 10rem 1fr;
+  grid-template-columns: 1fr 10rem 5rem;
   justify-content: center;
 `;
 
@@ -42,7 +45,7 @@ const SearchText = styled.input.attrs((props) => ({
   font-size: 1.4rem;
   outline: 0;
   border: 0;
-  border-right: 1px solid #F2F2F2;
+  border-right: 1px solid #f2f2f2;
   margin-left: 1rem;
 `;
 
@@ -54,7 +57,7 @@ const SearchGuest = styled.input.attrs((props) => ({
   color: #bdbdbd;
   outline: 0;
   border: 0;
-  border-right: 1px solid #F2F2F2;
+  border-right: 1px solid #f2f2f2;
   margin-left: 1rem;
 
   ::-webkit-outer-spin-button {

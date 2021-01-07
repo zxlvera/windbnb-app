@@ -4,7 +4,7 @@ import { StaysContext } from "../context";
 
 const GridLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
   grid-auto-rows: 38rem;
   grid-gap: 2rem;
   justify-items: center;
