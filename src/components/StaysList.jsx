@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { StaysContext } from "../context";
 
 const GridLayout = styled.div`
-  height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 38rem;

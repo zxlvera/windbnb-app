@@ -11,9 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-left: 30rem;
-  margin-right: 30rem;
-  margin-top: 3rem;
+  margin: 5vh min(15vw) 5vh min(15vw);
   color: #333333;
 }
 
