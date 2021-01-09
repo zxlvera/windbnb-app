@@ -1,13 +1,7 @@
-import React, { Component } from 'react'
+import React, { UseContext } from 'react'
 
-export class Overlay extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+const Overlay = () => {
+    return (<h1>Overlay Test</h1>)
 }
 
 export default Overlay

@@ -1,37 +1,61 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 5vh min(15vw) 5vh min(15vw);
   color: #333333;
 }
 
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  body {
+    margin: 5vh;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    margin: 5vh min(10vw) 5vh min(10vw);
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  body {
+    margin: 5vh min(12vw) 5vh min(12vw);
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  body {
+    margin: 5vh min(15vw) 5vh min(15vw);
+  }
+}
+
 h1 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2.9rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.9rem;
 }
 
 h3 {
-    font-size:1.6rem;
-    font-weight: 500;
-    line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
 }
 
 h6 {
-   font-family: 'Mulish';
-   font-weight: 500;
-   font-size: 1.4rem;
-   line-height: 1.7rem;
-   color: #868686; 
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #868686;
 }
-

@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import logo from "../logo.svg";
 import styled from "styled-components";
+import Overlay from "./Overlay";
 import { StaysContext } from "../context";
 
 const HeaderBlock = styled.div`
@@ -80,15 +81,24 @@ const SearchIcon = styled.button`
 const Header = () => {
   const appContext = useContext(StaysContext);
   const { data } = appContext;
+
+  const [overlay, setOverlay] = useState(false);
+  useEffect(() => {
+      alert(overlay)
+      return (<h1>{overlay}</h1>)
+  })
+
   return (
     <>
       <HeaderBlock>
         <Logo src={logo} alt="Logo" />
         <SearchBarBlock>
           <SearchBar>
-            <SearchText placeholder="Helsinki, Finland" />
+            <SearchText
+              placeholder="Helsinki, Finland"
+            />
             <SearchGuest placeholder="Add guests" />
-            <SearchIcon>
+              <SearchIcon onClick={() => setOverlay(true)}>
               <i style={{ color: "#eb5757" }} className="material-icons">
                 search
               </i>

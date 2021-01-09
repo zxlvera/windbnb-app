@@ -6,9 +6,23 @@ const GridLayout = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-auto-rows: max-content;
-  grid-gap: 5rem;
+  grid-gap: 3rem;
   justify-items: center;
   margin-bottom: 5rem;
+
+  @media only screen and (min-width: 1080px) {
+    grid-gap: 3rem;
+  }
+
+  @media only screen and (min-width: 1440px) and (max-width: 1900px) {
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    grid-gap: 3rem;
+  }
+
+  @media only screen and (min-width: 1900px) {
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    grid-gap: 3rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -59,6 +73,9 @@ const Img = styled.img`
   height: 30rem;
   object-fit: cover;
   margin-bottom: 1rem;
+  @media only screen and (min-width: 1400px) {
+    height: 30rem;
+  }
 `;
 
 const StaysList = () => {
