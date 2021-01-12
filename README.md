@@ -8,11 +8,11 @@
 
    <div align="center">
      <h3>
-         <a href="https://{your-demo-link.your-domain}">
+         <a href="https://jovial-rosalind-3bb4ce.netlify.app/">
                Demo
          </a>
          <span> | </span>
-         <a href="https://{your-url-to-the-solution}">
+         <a href="https://github.com/zxlvera/windbnb-app">
             Solution
          </a>
          <span> | </span>
