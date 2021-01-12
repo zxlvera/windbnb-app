@@ -83,4 +83,4 @@ $ npm start
 ## Contact
 - GitHub [@zxlvera](https://{github.com/zxlvera})
 - [LinkedIn](https://www.linkedin.com/in/veralimzx/)
-:Please update value in the {}  -->
+
