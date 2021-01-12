@@ -20,7 +20,7 @@
                                                    Challenge
                                                        </a>
                                                          </h3>
-                                                         </div>
+</div>
 
                                                          <!-- TABLE OF CONTENTS -->
 
