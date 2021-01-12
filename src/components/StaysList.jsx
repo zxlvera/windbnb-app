@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { StaysContext } from "../context";
 
@@ -80,8 +80,12 @@ const Img = styled.img`
 
 const StaysList = () => {
   const appContext = useContext(StaysContext);
-  const { data } = appContext;
-  console.log(data);
+  const { data, handleData, city, guests } = appContext;
+
+  useEffect(() => {
+    handleData(city, guests)
+  },[city, guests]);
+
   return (
     <>
       <GridLayout>

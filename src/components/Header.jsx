@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import logo from "../logo.svg";
 import styled from "styled-components";
 import Overlay from "./Overlay";
@@ -32,7 +32,7 @@ const SearchBarBlock = styled.div`
   flex: 0 1 40rem;
 `;
 
-const SearchBar = styled.form`
+const SearchBar = styled.div`
   height: 5.5rem;
   display: grid;
   grid-template-columns: 1fr 10rem 5rem;
@@ -47,7 +47,7 @@ const SearchText = styled.input.attrs((props) => ({
   outline: 0;
   border: 0;
   border-right: 1px solid #f2f2f2;
-  margin-left: 2rem;
+  padding-left: 2rem;
 `;
 
 const SearchGuest = styled.input.attrs((props) => ({
@@ -59,7 +59,7 @@ const SearchGuest = styled.input.attrs((props) => ({
   outline: 0;
   border: 0;
   border-right: 1px solid #f2f2f2;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 
   ::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -80,25 +80,43 @@ const SearchIcon = styled.button`
 
 const Header = () => {
   const appContext = useContext(StaysContext);
-  const { data } = appContext;
+  const {
+    data,
+    overlay,
+    handleOverlay,
+    locOverlay,
+    handleLocation,
+    guestsOverlay,
+    handleGuests,
+    city,
+    guests
+  } = appContext;
 
-  const [overlay, setOverlay] = useState(false);
-  useEffect(() => {
-      alert(overlay)
-      return (<h1>{overlay}</h1>)
-  })
 
   return (
     <>
+      {overlay ? <Overlay /> : ""}
       <HeaderBlock>
         <Logo src={logo} alt="Logo" />
         <SearchBarBlock>
           <SearchBar>
             <SearchText
+              onClick={() => {
+                handleOverlay(overlay);
+                handleLocation(locOverlay);
+              }}
               placeholder="Helsinki, Finland"
+              defaultValue={city ? city + ', Finland' : ''}
             />
-            <SearchGuest placeholder="Add guests" />
-              <SearchIcon onClick={() => setOverlay(true)}>
+            <SearchGuest
+              onClick={() => {
+                handleOverlay(overlay);
+                handleGuests(guestsOverlay);
+              }}
+              placeholder="Add guests"
+              defaultValue={guests > 0 ? guests : ''}
+            />
+            <SearchIcon onClick={() => handleOverlay(overlay)}>
               <i style={{ color: "#eb5757" }} className="material-icons">
                 search
               </i>
