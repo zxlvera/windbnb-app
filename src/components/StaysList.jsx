@@ -82,7 +82,6 @@ const StaysList = () => {
   const appContext = useContext(StaysContext);
   const { data, handleData, city, guests } = appContext;
 
-  handleData(city, guests);
   useEffect(() => {
     handleData(city, guests)
   },[city, guests, handleData]);
