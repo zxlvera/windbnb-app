@@ -81,6 +81,6 @@ $ npm start
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
-- GitHub [@zxlvera](https://{github.com/zxlvera})
+- GitHub [@zxlvera](https://github.com/zxlvera)
 - [LinkedIn](https://www.linkedin.com/in/veralimzx/)
 
