@@ -23,7 +23,6 @@ const StaysProvider = (props) => {
   const [allCities] = useState([...new Set(listOfCities)]);
 
   const handleData = (city, guests) => {
-    console.log(guests);
     let filteredData = staysData.filter(function (item) {
       if (city && guests === 0) {
         return item.city === city;
@@ -34,9 +33,9 @@ const StaysProvider = (props) => {
       } else if (!city && guests > 0) {
         return item.maxGuests >= guests;
       }
+      return null;
     });
     setData(filteredData);
-    console.log(filteredData);
   };
 
   const handleOverlay = (overlay) => {
