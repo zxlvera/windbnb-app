@@ -11,6 +11,10 @@ const OverlayBlock = styled.div`
   z-index: 1;
   border: 1px solid #000;
   background: #ffffff;
+
+  @media only screen and (min-width: 120px) and (max-width: 1300px){
+    height: 98% 
+  }
 `;
 
 const SearchBarBlock = styled.div`
@@ -23,8 +27,7 @@ const SearchBarBlock = styled.div`
   margin: 5vh 15vw 5vh 15vw;
 `;
 
-const SelectionBlock = styled.div`
-`;
+const SelectionBlock = styled.div``;
 
 const SearchBar = styled.div`
   display: grid;
@@ -38,7 +41,7 @@ const SearchBar = styled.div`
     grid-gap: 3rem;
   }
 
-  @media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  @media only screen and (min-width: 1300px) and (max-width: 1900px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
   }
